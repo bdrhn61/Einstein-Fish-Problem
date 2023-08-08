@@ -7,10 +7,12 @@ import '../../../Provider/allProvider.dart';
 
 class AnaEkranIpucuVeSoru extends ConsumerWidget {
   const AnaEkranIpucuVeSoru({super.key});
-  
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var sayac=ref.watch(sayacStateProvider);
+    var sayac = ref.watch(sayacStateProvider);
+    var gosterilsinMi = ref.watch(gosterilsinMiStateProvider);
+
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -19,38 +21,44 @@ class AnaEkranIpucuVeSoru extends ConsumerWidget {
           child: GestureDetector(
             child: ipucuSoruIcon('lib/images/request.png'),
             onTap: () {
-              ref.read(sayacStateProvider.notifier).state+=10;
-             // snack(context);
+              ref.read(sayacStateProvider.notifier).state += 10;
+              // snack(context);
             },
           ),
         ),
-        Stack(
-          children:[ Container(
-              width: globalEn/1.3,
-              height: globalBoy / 50,
-              color: UtilSplashRenkler.redColor,
-            ),
-            AnimatedSize(
-              duration: const Duration(seconds: 1),
-              //curve: Curves.bounceInOut,
-              child: Container(
-                width: sayac,
-                height: globalBoy / 50,
-                color: UtilSplashRenkler.greenColor,
-                       
-              ),
-            ),]
-        ),
+        
+             Opacity(
+               opacity: gosterilsinMi,
+               child: Stack(children: [
+                  Container(
+                      width: globalEn / 1.3,
+                      height: globalBoy / 50,
+                      color: UtilSplashRenkler.backColor),
+                  AnimatedSize(
+                    duration: const Duration(seconds: 1),
+                    //curve: Curves.bounceInOut,
+                    child: Container(
+                      width: sayac,
+                      height: globalBoy / 50,
+                      color: UtilSplashRenkler.greenColor,
+                    ),
+                  ),
+                ]),
+             ),
+           
         Container(
-          
           height: globalBoy / 8,
           child: GestureDetector(
             child: ipucuSoruIcon('lib/images/information.png'),
             onTapDown: (details) {
               ipucuGoster(ref);
+              ref.read(gosterilsinMiStateProvider.notifier).state =0;
+                 
             },
             onTapUp: (details) {
               ipucuKaybet(ref);
+              ref.read(gosterilsinMiStateProvider.notifier).state =1;
+                  
             },
           ),
         ),

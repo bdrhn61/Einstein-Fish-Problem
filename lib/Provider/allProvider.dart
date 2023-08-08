@@ -14,3 +14,5 @@ late ConfettiController controllerCenter =
 
 final yaziyiGosterProvider  = StateProvider<bool>((ref) => false);
 final sayacStateProvider  = StateProvider<double>((ref) => 0);
+final gosterilsinMiStateProvider  = StateProvider<double>((ref) => 1);
+

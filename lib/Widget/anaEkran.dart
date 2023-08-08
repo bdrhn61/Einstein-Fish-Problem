@@ -39,7 +39,7 @@ class MyHomePageState extends ConsumerState {
     return Scaffold(
       floatingActionButton: Padding(
           padding: EdgeInsets.only(left: globalEn / 16.5),
-          child: const AnaEkranIpucuVeSoru()),
+          child:  const AnaEkranIpucuVeSoru()),
       backgroundColor: Colors.black,
       body: const Stack(
         children: [
