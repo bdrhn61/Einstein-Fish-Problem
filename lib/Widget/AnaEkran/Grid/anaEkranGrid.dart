@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'DilPaketi/dilKoduDondur.dart';
-import 'DilPaketi/dilPackage.dart';
-import 'Provider/allProvider.dart';
-import 'Utils/renkler.dart';
-import 'oyunController.dart';
+import '../../../DilPaketi/dilKoduDondur.dart';
+import '../../../DilPaketi/dilPackage.dart';
+import '../../../Provider/allProvider.dart';
+import '../../../Utils/renkler.dart';
+import '../../../oyunController.dart';
 
-class Deneme extends ConsumerStatefulWidget  {
-  const Deneme({
+class AnaEkranGrid extends ConsumerStatefulWidget  {
+  const AnaEkranGrid({
     super.key,
   });
   @override
-  DenemeState createState() => DenemeState();
+  AnaEkranGridState createState() => AnaEkranGridState();
 }
 
-class DenemeState extends ConsumerState  {
+class AnaEkranGridState extends ConsumerState  {
   List<List<String>> dropdownItems = [
     ['Danimarkalı', 'Norveçli', 'Alman', 'İsveçli', 'İngiliz'],
     ['Mavi', 'Yeşil', 'Siyah', 'Sarı', 'Kırmızı'],

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../../DilPaketi/dilKoduDondur.dart';
-import '../../DilPaketi/soru.dart';
-import '../../Utils/renkler.dart';
-import '../../Provider/allProvider.dart';
+import '../../../DilPaketi/dilKoduDondur.dart';
+import '../../../DilPaketi/soru.dart';
+import '../../../Utils/renkler.dart';
+import '../../../Provider/allProvider.dart';
 
 class AnaEkranIpucuVeSoru extends ConsumerWidget {
   const AnaEkranIpucuVeSoru({super.key});

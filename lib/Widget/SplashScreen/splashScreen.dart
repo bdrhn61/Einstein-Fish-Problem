@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test/widget/SplashScreen/splashYazi.dart';
 import '../../Utils/renkler.dart';
-import '../../anaEkran.dart';
+import '../anaEkran.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({

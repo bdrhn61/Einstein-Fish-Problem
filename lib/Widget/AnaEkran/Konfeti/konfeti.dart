@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 
-import '../../Provider/allProvider.dart';
+import '../../../Provider/allProvider.dart';
 
 class Konfeti extends StatelessWidget {
   const Konfeti({

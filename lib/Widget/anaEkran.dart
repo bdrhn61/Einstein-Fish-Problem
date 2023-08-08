@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:test/Reklam/advert-service.dart';
-import 'package:test/widget/AnaEkran/ipucu.dart';
-import 'package:test/widget/AnaEkran/anaEkranIpucuVeSoru.dart';
-import 'package:test/widget/AnaEkran/konfeti.dart';
+import '../Provider/allProvider.dart';
+import 'AnaEkran/Grid/anaEkranGrid.dart';
+import 'AnaEkran/IpucuVeSoru/anaEkranIpucuVeSoru.dart';
+import 'AnaEkran/IpucuVeSoru/ipucu.dart';
+import 'AnaEkran/Konfeti/konfeti.dart';
 
-import 'Provider/allProvider.dart';
-import 'deneme.dart';
 
 class MyHomePage extends ConsumerStatefulWidget {
   const MyHomePage({
@@ -35,9 +35,7 @@ class MyHomePageState extends ConsumerState {
     reklamSayaci = reklamSayaci + 1;
     if (reklamSayaci % 25 == 0) {
       advertService.showInterstitialAd();
-      // _showInterstitialAd();
     }
-    print('build ssss');
     return Scaffold(
       floatingActionButton: Padding(
           padding: EdgeInsets.only(left: globalEn / 16.5),
@@ -45,7 +43,7 @@ class MyHomePageState extends ConsumerState {
       backgroundColor: Colors.black,
       body: const Stack(
         children: [
-          Deneme(),
+          AnaEkranGrid(),
           Konfeti(),
           Ipucu(),
         ],
