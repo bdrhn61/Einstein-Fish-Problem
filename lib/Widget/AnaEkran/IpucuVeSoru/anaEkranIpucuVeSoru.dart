@@ -19,10 +19,9 @@ class AnaEkranIpucuVeSoru extends ConsumerWidget {
         Container(
           height: globalBoy / 9.2,
           child: GestureDetector(
-            child: ipucuSoruIcon('lib/images/request.png'),
+            child: ipucuSoruIcon('assets/images/request.png'),
             onTap: () {
-              ref.read(sayacStateProvider.notifier).state += 10;
-              // snack(context);
+               snack(context);
             },
           ),
         ),
@@ -49,7 +48,7 @@ class AnaEkranIpucuVeSoru extends ConsumerWidget {
         Container(
           height: globalBoy / 8,
           child: GestureDetector(
-            child: ipucuSoruIcon('lib/images/information.png'),
+            child: ipucuSoruIcon('assets/images/information.png'),
             onTapDown: (details) {
               ipucuGoster(ref);
               ref.read(gosterilsinMiStateProvider.notifier).state =0;
